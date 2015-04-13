@@ -71,17 +71,29 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      allowLocationSimulation = "YES"
+      notificationPayloadFile = "AssetAppleWatch WatchKit Extension/PushNotificationPayload.apns">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/AssetAppleWatch">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "365862601AD7F5BD00DF3C9F"
-            BuildableName = "AssetAppleWatch.app"
-            BlueprintName = "AssetAppleWatch"
+            BlueprintIdentifier = "3658629C1AD7F5D800DF3C9F"
+            BuildableName = "AssetAppleWatch WatchKit App.app"
+            BlueprintName = "AssetAppleWatch WatchKit App"
             ReferencedContainer = "container:AssetAppleWatch.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3658629C1AD7F5D800DF3C9F"
+            BuildableName = "AssetAppleWatch WatchKit App.app"
+            BlueprintName = "AssetAppleWatch WatchKit App"
+            ReferencedContainer = "container:AssetAppleWatch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

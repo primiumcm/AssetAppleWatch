@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,7 +23,7 @@
 		365862AB1AD7F5D800DF3C9F /* AssetAppleWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3658628E1AD7F5D700DF3C9F /* AssetAppleWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3672ED3E1AD7FC15004041BD /* SharingData WatchKit Extension.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 3672ED3D1AD7FC15004041BD /* SharingData WatchKit Extension.entitlements */; };
 		3672ED401AD7FC23004041BD /* SharingData.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 3672ED3F1AD7FC23004041BD /* SharingData.entitlements */; };
-		3672ED431AD80320004041BD /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = 3672ED421AD80320004041BD /* MainRowType.m */; };
+		36FEB1B51ADBBD5F009AB395 /* MainRowType.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FEB1B41ADBBD5F009AB395 /* MainRowType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +92,10 @@
 		365862A71AD7F5D800DF3C9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3672ED3D1AD7FC15004041BD /* SharingData WatchKit Extension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "SharingData WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		3672ED3F1AD7FC23004041BD /* SharingData.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SharingData.entitlements; sourceTree = "<group>"; };
-		3672ED411AD80320004041BD /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainRowType.h; sourceTree = "<group>"; };
-		3672ED421AD80320004041BD /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRowType.m; sourceTree = "<group>"; };
+		36FEB1B31ADBBD5F009AB395 /* MainRowType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainRowType.h; sourceTree = "<group>"; };
+		36FEB1B41ADBBD5F009AB395 /* MainRowType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainRowType.m; sourceTree = "<group>"; };
+		36FEB1B61ADBD9B7009AB395 /* AssetAppleWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AssetAppleWatch.entitlements; sourceTree = "<group>"; };
+		36FEB1B71ADBDC5D009AB395 /* AssetAppleWatch WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "AssetAppleWatch WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		365862631AD7F5BD00DF3C9F /* AssetAppleWatch */ = {
 			isa = PBXGroup;
 			children = (
+				36FEB1B61ADBD9B7009AB395 /* AssetAppleWatch.entitlements */,
 				3672ED3F1AD7FC23004041BD /* SharingData.entitlements */,
 				365862681AD7F5BD00DF3C9F /* AppDelegate.h */,
 				365862691AD7F5BD00DF3C9F /* AppDelegate.m */,
@@ -188,13 +191,14 @@
 		3658628F1AD7F5D800DF3C9F /* AssetAppleWatch WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				36FEB1B71ADBDC5D009AB395 /* AssetAppleWatch WatchKit Extension.entitlements */,
 				3672ED3D1AD7FC15004041BD /* SharingData WatchKit Extension.entitlements */,
-				365862931AD7F5D800DF3C9F /* InterfaceController.h */,
 				362D8CD01AD80A190099EC84 /* TableInterfaceController.h */,
 				362D8CD11AD80A190099EC84 /* TableInterfaceController.m */,
-				3672ED411AD80320004041BD /* MainRowType.h */,
-				3672ED421AD80320004041BD /* MainRowType.m */,
+				365862931AD7F5D800DF3C9F /* InterfaceController.h */,
 				365862941AD7F5D800DF3C9F /* InterfaceController.m */,
+				36FEB1B31ADBBD5F009AB395 /* MainRowType.h */,
+				36FEB1B41ADBBD5F009AB395 /* MainRowType.m */,
 				365862991AD7F5D800DF3C9F /* Images.xcassets */,
 				365862901AD7F5D800DF3C9F /* Supporting Files */,
 			);
@@ -308,10 +312,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = "Gallardo, Miguel A.";
+				ORGANIZATIONNAME = Accenture;
 				TargetAttributes = {
 					365862601AD7F5BD00DF3C9F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = QJG68W82D2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					365862791AD7F5BD00DF3C9F = {
 						CreatedOnToolsVersion = 6.3;
@@ -319,6 +329,12 @@
 					};
 					3658628D1AD7F5D700DF3C9F = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = QJG68W82D2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3658629C1AD7F5D800DF3C9F = {
 						CreatedOnToolsVersion = 6.3;
@@ -326,7 +342,7 @@
 				};
 			};
 			buildConfigurationList = 3658625C1AD7F5BD00DF3C9F /* Build configuration list for PBXProject "AssetAppleWatch" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -409,8 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3672ED431AD80320004041BD /* MainRowType.m in Sources */,
 				365862951AD7F5D800DF3C9F /* InterfaceController.m in Sources */,
+				36FEB1B51ADBBD5F009AB395 /* MainRowType.m in Sources */,
 				362D8CD21AD80A190099EC84 /* TableInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +496,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Miguel Angel Gallardo (79EB2TZSN6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -502,6 +518,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c492bab4-2249-41d0-a047-b0de48cedd72";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -523,7 +540,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Miguel Angel Gallardo (79EB2TZSN6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Miguel Angel Gallardo (79EB2TZSN6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -538,6 +556,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "c492bab4-2249-41d0-a047-b0de48cedd72";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -547,9 +566,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AssetAppleWatch/AssetAppleWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AssetAppleWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -557,9 +580,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AssetAppleWatch/AssetAppleWatch.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AssetAppleWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -632,6 +659,9 @@
 		365862B01AD7F5D800DF3C9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AssetAppleWatch WatchKit Extension/AssetAppleWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -639,6 +669,7 @@
 				INFOPLIST_FILE = "AssetAppleWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -646,9 +677,13 @@
 		365862B11AD7F5D800DF3C9F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "AssetAppleWatch WatchKit Extension/AssetAppleWatch WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "AssetAppleWatch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

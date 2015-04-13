@@ -10,31 +10,32 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label width="135" alignment="left" text="Label" id="yTy-kl-ORE">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
-                        </label>
-                        <button width="1" alignment="left" title="Button 1" id="q0K-nK-UXv">
+                        <button width="1" alignment="left" title="Shopping List" id="udx-hJ-8V3">
                             <connections>
-                                <action selector="showUserInfo" destination="AgC-eL-Hgc" id="AeW-yj-8QP"/>
+                                <segue destination="6aI-hf-nIA" kind="push" id="uQe-Ys-UcK"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Button 2" id="aEM-VR-22u">
+                        <button width="1" alignment="left" title="Pay" id="aEM-VR-22u">
                             <connections>
-                                <segue destination="taH-io-a1h" kind="modal" id="MLL-G9-HXv"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Button 3" id="udx-hJ-8V3">
-                            <connections>
-                                <segue destination="6aI-hf-nIA" kind="modal" id="uQe-Ys-UcK"/>
+                                <action selector="showUserInfo" destination="AgC-eL-Hgc" id="GSG-wJ-JEL"/>
+                                <segue destination="NJs-Lo-D31" kind="push" id="QsU-Iz-Jwm"/>
                             </connections>
                         </button>
                     </items>
-                    <connections>
-                        <outlet property="myLabel" destination="yTy-kl-ORE" id="QB5-ic-2MK"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="217" y="448"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="mwI-th-L3B">
+            <objects>
+                <controller id="NJs-Lo-D31">
+                    <items>
+                        <imageView width="121" height="70" alignment="center" verticalAlignment="center" image="ApplePay" contentMode="scaleAspectFill" id="L9M-bT-fOh"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="501" y="574"/>
         </scene>
         <!--Table Interface Controller-->
         <scene sceneID="icQ-i0-foE">
@@ -43,31 +44,29 @@
                     <items>
                         <table alignment="left" id="vGD-nb-aZg">
                             <items>
-                                <tableRow id="TC4-5S-Zs9" userLabel="mainRowType">
+                                <tableRow identifier="RowSelected" id="TC4-5S-Zs9" userLabel="mainRowType" customClass="MainRowType">
                                     <group key="rootItem" width="1" height="39.5" alignment="left" id="UTH-NI-3cM">
                                         <items>
-                                            <imageView width="58" height="29" alignment="left" verticalAlignment="center" id="8cI-h6-MwV"/>
-                                            <label width="63" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="gUE-B7-kT9"/>
+                                            <imageView width="14" height="39" alignment="left" verticalAlignment="center" image="BarraVerde" contentMode="scaleAspectFit" id="8cI-h6-MwV"/>
+                                            <label width="108" alignment="left" verticalAlignment="center" text="Label" textAlignment="center" id="gUE-B7-kT9">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="rowDescription" destination="gUE-B7-kT9" id="5RG-FG-X1G"/>
+                                        <outlet property="rowIcon" destination="8cI-h6-MwV" id="mHr-fG-X3l"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="myTable" destination="vGD-nb-aZg" id="1ld-QE-lZ0"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="490" y="464"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="Zbk-z2-UC9">
-            <objects>
-                <controller id="taH-io-a1h">
-                    <items>
-                        <label alignment="left" text="Segunda " id="YPW-QV-Tfx"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="479" y="161"/>
+            <point key="canvasLocation" x="501" y="264"/>
         </scene>
     </scenes>
 </document>

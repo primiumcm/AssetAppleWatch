@@ -9,6 +9,10 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 
-@interface TableInterfaceController : WKInterfaceController
+@interface TableInterfaceController : WKInterfaceController {
+    
+IBOutlet WKInterfaceTable *myTable;
+    
+}
 
 @end

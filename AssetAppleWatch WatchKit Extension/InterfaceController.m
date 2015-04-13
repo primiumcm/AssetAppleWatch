@@ -39,19 +39,13 @@ int cont = 0;
     // This method is called when watch view controller is no longer visible
     NSLog(@"%@ did deactivate", self);
 }
+
+
 - (IBAction)showUserInfo {
-    NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.sharingdata"];
+    NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.AssetAppleWatch"];
     [mySharedDefaults synchronize];
-//    self.myLabel.text = [mySharedDefaults stringForKey:@"savedUserInput"];
+    self.myLabel.text = [mySharedDefaults stringForKey:@"savedUserInput"];
     
-    if (cont==0) {
-        self.myLabel.text = @"Has seleccionado";
-        cont=1;
     }
-    else {
-        self.myLabel.text = @"Has deseleccionado";
-        cont=0;
-    }
-}
 
 @end

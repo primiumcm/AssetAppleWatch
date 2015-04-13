@@ -15,11 +15,12 @@
 @implementation ViewController
 
 @synthesize myLabel;
-@synthesize myTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Arranco iPhone");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,14 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)saveInfo:(id)sender {
+- (IBAction)save:(id)sender {
+
+    NSString *myString = [self.myTextField text];
+    self.myTextField.text = myString;
     
-    NSString* myString = [myTextField text];
-    self.myLabel.text = myString;
-    
-    NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.sharingdata"];
+    NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.AssetAppleWatch"];
     [mySharedDefaults setObject:myString forKey:@"savedUserInput"];
     [mySharedDefaults synchronize];
+
     
 }
 
